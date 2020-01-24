@@ -1,0 +1,42 @@
+#+TITLE: setup
+
+* TODO Hackintosh
+
+
+* Applications
+** Adobe Acrobat 2017
+** Alfred 4
+** Amphetamine
+** AppCleaner
+** Arduino
+** Backup and Sync [Ehhhh]
+** balenaEtcher
+** Clone Hero
+** coconutBattery
+** Dark Boot
+** Firefox
+** Emacs
+** Final Cut Pro
+** Firefox
+** Chrome
+** Hammerspoon
+** Inkscape
+** iTerm
+** Karabiner-Elements
+** Logic Pro X
+** MacForge
+** Mathematica
+** MATLAB
+** Microsoft Office
+** Motion
+** OpenSCAD
+** Spotify
+** Slack
+** Spotify
+** TeamViewer
+** Unarchiver
+** TidyUp
+** Ultimaker Cura
+** VMware Fusion
+** WeChat
+** Zoom
