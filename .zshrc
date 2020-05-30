@@ -1,6 +1,8 @@
 export EDITOR="/usr/local/bin/nvim"
 export PATH="/Applications:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
 autoload -Uz compinit
 compinit
 # Alias vim -> nvim
@@ -38,3 +40,21 @@ bindkey '^I' complete_pwd_items_on_empty_buffer
 source ~/.iterm2_shell_integration.zsh
 [ -e ~/.profile ] && . ~/.profile
 eval 
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+export CPPFLAGS=-I/usr/local/opt/llvm/include
+
+# opam configuration
+test -r /Users/brick/.opam/opam-init/init.zsh && . /Users/brick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brick/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brick/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brick/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brick/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
