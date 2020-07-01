@@ -9,6 +9,8 @@ compinit
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+alias vim="nvim"
+alias vi="nvim"
 
 # Alias Tmuxinator
 alias tx=tmuxinator
@@ -49,6 +51,12 @@ export CPPFLAGS=-I/usr/local/opt/llvm/include
 test -r /Users/brick/.opam/opam-init/init.zsh && . /Users/brick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# Fuzzy Completion
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}'
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/brick/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brick/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -58,3 +66,15 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+ctags=/usr/local/bin/ctags
+
+function GenCTags() {
+    sh ~/.config/ctags/ctagsGenDeps.sh
+}
+
+# SSH Aliases
+alias brickHouse='ssh root@45.33.70.138'
+alias meatbox='echo "Error: You are not up in the closet"'
+alias JayIsGay='echo "I know, dog"'
+alias JakeLikesFingysInHisButt='echo "Bro I know its kinda weird"'
+alias MattIsAFaggot='echo "Thats crazy, bro"'
