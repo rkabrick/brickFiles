@@ -1,0 +1,2 @@
+sudo cp *.ttf /usr/share/fonts/TTF
+fc-cache -fv
